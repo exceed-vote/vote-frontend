@@ -3,9 +3,21 @@
   background-color: #2E3249;
 }
 
-.show-group-info {
+.carousel {
+    background-color: rgba(255, 255, 255, 0.2);
+		max-height: 500px;
+}
+
+/*.show-group-info {
   height: 500px;
   background-color: rgba(255, 255, 255, 0.2);
+}*/
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+		/*width: 80%;*/
+		max-width: 700px;
+		max-height: 500px;
 }
 
 a.left.carousel-control {
@@ -104,7 +116,7 @@ a.right.carousel-control {
 	}
 
 	.styled-select .select-button .select-button-text span{
-		font-size; 1em;
+		font-size: 1em;
 	}
 
 

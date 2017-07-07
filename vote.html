@@ -16,6 +16,8 @@
   </head>
   <body class="bg-color">
     <div class="show-group-info">
+
+      <!--start carousel-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -25,37 +27,46 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="container carousel-inner" style="height: 500px; width: 80%;">
+        <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <h1>Group 1</h1>
-            <h1>hello</h1>
-            <h1>bye</h1>
+            <img src="groupIMG/group1.jpg" alt="group 1" class="img-responsive">
+            <div class="carousel-caption">
+              <h1>Group 1</h1>
+              <p>dflaskd asdg asgaehj ajhgehj  easeasesae</p>
+            </div>
           </div>
 
           <div class="item">
-            <h1>Group 2</h1>
-            <h1>hello</h1>
-            <h1>bye</h1>
+            <img src="groupIMG/group2.jpg" alt="group 2" class="img-responsive">
+            <div class="carousel-caption">
+              <h1>Group 2</h1>
+              <p>dflaskd asdg asgaehj ajhgehj  easeasesae</p>
+            </div>
           </div>
 
           <div class="item">
-            <h1>Group 3</h1>
-            <h1>hello</h1>
-            <h1>bye</h1>
+            <img src="groupIMG/group3.jpg" alt="group 3" class="img-responsive">
+            <div class="carousel-caption">
+              <h1>Group 3</h1>
+              <p>dflaskd asdg asgaehj ajhgehj  easeasesae</p>
+            </div>
           </div>
+         
         </div>
 
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
+      <!--end of carousel-->
     </div>
+
     <div class="row vote-tab">
       <div class="col-md-8 logo-vote">
       <div class="container">
