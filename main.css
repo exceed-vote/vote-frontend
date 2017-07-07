@@ -1,0 +1,71 @@
+.bg-color {
+  background-image: url("main-bg.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .bg-color {
+    background-image: url("main-mobile.png");
+    background-size: 100% 100%;
+  }
+}
+
+.main-bg {
+  margin: auto;
+  margin-top: 15%;
+  margin-left: 8%;
+  height: 500px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.keep-center {
+  margin: auto;
+}
+
+.login-block {
+  margin-top: 120px;
+  border-left: 2px;
+  border-color: #ffffff;
+}
+
+.login-input {
+  border-radius: 8px;
+  border: none;
+  background-color: #A5B2D3;
+  height: 28px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.vote-btn-bg {
+  background-color: inherit;
+  /*width: 15%;*/
+  border: none;
+  /*margin-left: 88px;*/
+}
+@media only screen and (max-width: 992px) {
+  .vote-btn-bg {
+    /*width: 30%;*/
+  }
+  .main-bg {
+    margin-top: 30%;
+    margin-left: 18%;
+    margin-right: 15%;
+  }
+}
+
+.vote-btn-size {
+  height: 50px;
+  width: auto;
+}
+
+.line-white {
+  height: 100%;
+  border-left: 5px #ffffff;
+}
