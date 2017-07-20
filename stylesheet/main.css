@@ -6,6 +6,10 @@
   background-size: 100% 100%;
 }
 
+input:focus {
+  outline: 0;
+}
+
 @media only screen and (max-width: 700px) {
   .bg-color {
     background-image: url("../images/main-mobile.png");
@@ -49,6 +53,11 @@
   border: none;
   /*margin-left: 88px;*/
 }
+
+.vote-btn-bg:focus {
+  outline: 0;
+}
+
 @media only screen and (max-width: 992px) {
   .vote-btn-bg {
     /*width: 30%;*/
