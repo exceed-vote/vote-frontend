@@ -4,8 +4,8 @@
 }
 
 .carousel {
-    background-color: rgba(255, 255, 255, 0.2);
-		max-height: 500px;
+	/*border-bottom: 1px solid white;*/
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*.show-group-info {
@@ -15,9 +15,7 @@
 
 .carousel-inner > .item > img {
     margin: 0 auto;
-		/*width: 80%;*/
 		max-width: 700px;
-		max-height: 500px;
 }
 
 a.left.carousel-control {
@@ -29,16 +27,19 @@ a.right.carousel-control {
 }
 
 .logo {
-  width: auto;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 .logo-vote {
-	margin-left: 100px;
+	display: inline-block;
+}
+.three-logo {
+	margin: 20px 5px;
 }
 .styled-logo {
 	position:relative;
 	overflow:hidden;
-	display:block;
+	/*display:block;*/
 	width:12em;
 	margin:auto;
 }
@@ -48,7 +49,7 @@ a.right.carousel-control {
 	  /*border:solid 1px #888888;*/
 	  overflow:hidden;
 	  display:block;
-	  width:12em;
+	  /*width:12em;*/
 	  margin:auto;
 	  font-size:1em; /*use this to scale the select*/
 	}
@@ -74,7 +75,7 @@ a.right.carousel-control {
 		background-color: #fff;
 	}
 	.line-select-pop {
-		padding-left: 10px;
+		margin: auto;
 		background-color: #ffffff;
 		border:solid 2px #F0635F;
 		border-radius: 12px;
@@ -149,9 +150,3 @@ a.right.carousel-control {
 	.submit-btn {
 		background-color: inherit;
 		border: none;
-		margin-top: 110px;
-	}
-	
-	.submit-btn:focus {
-		outline: 0;
-	}
