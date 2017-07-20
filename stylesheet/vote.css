@@ -119,7 +119,6 @@ a.right.carousel-control {
 		font-size: 1em;
 	}
 
-
 	.small-arrow-down {
 		width: 0;
 		height: 0;
@@ -151,4 +150,8 @@ a.right.carousel-control {
 		background-color: inherit;
 		border: none;
 		margin-top: 110px;
+	}
+	
+	.submit-btn:focus {
+		outline: 0;
 	}
