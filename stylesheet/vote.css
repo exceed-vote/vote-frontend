@@ -8,10 +8,9 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*.show-group-info {
-  height: 500px;
-  background-color: rgba(255, 255, 255, 0.2);
-}*/
+.show-group-info {
+	padding: 0 !important;
+}
 
 .carousel-inner > .item > img {
     margin: 0 auto;
@@ -150,3 +149,8 @@ a.right.carousel-control {
 	.submit-btn {
 		background-color: inherit;
 		border: none;
+	}
+
+	.choose-dropdown {
+		width: 80%
+	}
