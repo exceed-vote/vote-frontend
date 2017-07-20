@@ -51,7 +51,9 @@ a.right.carousel-control {
 	  display:block;
 	  /*width:12em;*/
 	  margin:auto;
-	  font-size:1em; /*use this to scale the select*/
+		font-size:1em; /*use this to scale the select*/
+		margin-top: 40px;
+		padding-right: 15px;
 	}
 
 	.styled-select select {
@@ -75,7 +77,6 @@ a.right.carousel-control {
 		background-color: #fff;
 	}
 	.line-select-pop {
-		margin: auto;
 		background-color: #ffffff;
 		border:solid 2px #F0635F;
 		border-radius: 12px;
@@ -150,3 +151,4 @@ a.right.carousel-control {
 	.submit-btn {
 		background-color: inherit;
 		border: none;
+	}
