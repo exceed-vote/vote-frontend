@@ -1,26 +1,42 @@
+const arr_data = [];
 $(document).ready(function() {
   $.ajax({
     url: 'http://localhost:8080/group',
     type: 'GET',
     dataType: 'json',
     success: function(data) {
-        var arr = $.map(data, function(el) { return el.name });
-        get_option(arr);
+        $.map(data, function(el) { 
+          arr_data.push({
+            id: el.code,
+            name: el.name
+          });
+        });
+        get_options(arr_data);
     }
   })
 
-  function get_option(data_name) {
-    var $popular = $('#popular-selected');
-    var $software = $('#software-selected');
-    var $hardware = $('#hardware-selected');
-
-    $.each(data_name, function (i, name) {
-      $popular.append($('<option>', { value: i, text : name }));
-      $software.append($('<option>', { value: i, text : name }));
-      $hardware.append($('<option>', { value: i, text : name }));
-    });
-  }
-
-  // console.log(Cookies.get("token"))
-    // console.log('2222');
 })
+
+$(document).on('change', 'select', function() {
+  console.log(this);
+  // $('#software-selected', this).remove();
+});
+
+function get_options(arr) {
+  $('select option').remove();
+  var $popular = $('#popular-selected');
+  var $software = $('#software-selected');
+  var $hardware = $('#hardware-selected');
+  $popular.append($('<option value="" disabled selected>Select popular vote</option>'));
+  $software.append($('<option value="" disabled selected>Select software vote</option>'));
+  $hardware.append($('<option value="" disabled selected>Select hardware vote</option>'));
+  $.each(arr, function (i, data) {
+    $popular.append($('<option>', { value: data.id, text : data.name }));
+    $software.append($('<option>', { value: data.id, text : data.name }));
+    $hardware.append($('<option>', { value: data.id, text : data.name }));
+  });
+}
+
+function remove_state() {
+  
+}
