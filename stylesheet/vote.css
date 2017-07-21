@@ -34,12 +34,15 @@ a.right.carousel-control {
   width: 100%;
   height: auto;
 }
+
 .logo-vote {
 	display: inline-block;
 }
+
 .three-logo {
 	margin: 20px 5px;
 }
+
 .styled-logo {
 	position:relative;
 	overflow:hidden;

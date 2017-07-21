@@ -2,6 +2,9 @@ const arr_data = [];
 var arr_popular = [];
 var arr_software = [];
 var arr_hardware = [];
+var pop = '';
+var soft = '';
+var hard = '';
 
 $(document).ready(function () {
   $.ajax({
@@ -14,39 +17,23 @@ $(document).ready(function () {
           id: el.code,
           name: el.name
         });
-        arr_popular = arr_data;
-        arr_software = arr_data;
-        arr_hardware = arr_data;
-        get_populars(arr_popular)
-        get_softwares(arr_software)
-        get_hardwares(arr_hardware);
-    })
-  }
-})
+      })
+      getAllData();
+    }
+  })
 
-$(document).on('change', 'select', function() {
-  var group_type = ["popular-selected", "software-selected", "hardware-selected"];
-  if(group_type[0] != $(this).attr("id")) {
-    arr_software = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_softwares(arr_software);
-    arr_hardware = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_hardwares(arr_hardware);
-  }else if(group_type[1] != $(this).attr("id")) {
-    arr_popular = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_softwares(arr_popular);
-    arr_hardware = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_hardwares(arr_hardware);
-  }else if(group_type[2] != $(this).attr("id")){
-    arr_software = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_softwares(arr_popular);
-    arr_popular = remove_state($('#'+$(this).attr("id") +' option:selected').text());
-    get_hardwares(arr_hardware);
-  }
-  console.log(arr_software);
-  console.log(arr_popular);
-  console.log(arr_hardware);
-  $('#'+$(this).attr("id") +' option[value=0]').remove();
-});
+  $(document).on('change', 'select', function(evt) {
+    var select = $('#' + evt.target.id + ' option:selected');
+    if (evt.target.id === 'popular-selected') {
+      pop = select.text();
+    } else if (evt.target.id === 'software-selected') {
+      soft = select.text();
+    } else {
+      hard = select.text();
+    }
+    getAvailable(evt.target.id);
+    $('#'+ evt.target.id +' option[value=0]').remove();
+  });
 
   $('#submit-vote').click(function () {
     $.ajax({
@@ -79,9 +66,9 @@ $(document).on('change', 'select', function() {
     })
   })
 })
-
-function remove_state(text) {
-  return arr_data.filter(function(el) {
+/*
+function remove_state(arr, text) {
+  return arr.filter(function(el) {
     return el.name !== text;
   });
 }
@@ -107,5 +94,47 @@ function get_hardwares(hardwares) {
   $('#hardware-selected option[value!=0]').remove();
   $.each(hardwares, function(i, data) {
     $hardware.append($('<option>', { value: data.id, text : data.name }));
+  })
+}
+*/
+
+function getAllData() {
+  var $popular = $('#popular-selected');
+  var $software = $('#software-selected');
+  var $hardware = $('#hardware-selected');
+  $.each(arr_data, function (i, data) {
+        $popular.append($('<option>', { value: data.id, text : data.name })); 
+        $software.append($('<option>', { value: data.id, text : data.name }));
+        $hardware.append($('<option>', { value: data.id, text : data.name }));
+  })
+}
+
+function getAvailable(id) {
+  var $popular = $('#popular-selected');
+  var $software = $('#software-selected');
+  var $hardware = $('#hardware-selected');
+    $('select option[value!=0]').remove();
+    addSelected();
+    $.each(arr_data, function (i, data) {
+      if(data.name !== pop && data.name !== soft && data.name !== hard) {
+        $popular.append($('<option>', { value: data.id, text : data.name })); 
+        $hardware.append($('<option>', { value: data.id, text : data.name }));
+        $software.append($('<option>', { value: data.id, text : data.name }));
+      }
+    })
+}
+
+function addSelected() {
+  var $popular = $('#popular-selected');
+  var $software = $('#software-selected');
+  var $hardware = $('#hardware-selected');
+  $.each(arr_data, function (i, data) {
+    if (data.name === pop) {
+      $popular.append($('<option>', { value: data.id, text : data.name })); 
+    } else if (data.name === soft) {
+      $software.append($('<option>', { value: data.id, text : data.name }));
+    } else if (data.name === hard) {
+      $hardware.append($('<option>', { value: data.id, text : data.name }));
+    }
   })
 }
