@@ -1,4 +1,8 @@
 const arr_data = [];
+var arr_popular = [];
+var arr_software = [];
+var arr_hardware = [];
+
 $(document).ready(function () {
   $.ajax({
     url: 'http://localhost:8080/group',
@@ -10,10 +14,39 @@ $(document).ready(function () {
           id: el.code,
           name: el.name
         });
-      });
-      get_options(arr_data);
-    }
-  })
+        arr_popular = arr_data;
+        arr_software = arr_data;
+        arr_hardware = arr_data;
+        get_populars(arr_popular)
+        get_softwares(arr_software)
+        get_hardwares(arr_hardware);
+    })
+  }
+})
+
+$(document).on('change', 'select', function() {
+  var group_type = ["popular-selected", "software-selected", "hardware-selected"];
+  if(group_type[0] != $(this).attr("id")) {
+    arr_software = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_softwares(arr_software);
+    arr_hardware = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_hardwares(arr_hardware);
+  }else if(group_type[1] != $(this).attr("id")) {
+    arr_popular = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_softwares(arr_popular);
+    arr_hardware = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_hardwares(arr_hardware);
+  }else if(group_type[2] != $(this).attr("id")){
+    arr_software = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_softwares(arr_popular);
+    arr_popular = remove_state($('#'+$(this).attr("id") +' option:selected').text());
+    get_hardwares(arr_hardware);
+  }
+  console.log(arr_software);
+  console.log(arr_popular);
+  console.log(arr_hardware);
+  $('#'+$(this).attr("id") +' option[value=0]').remove();
+});
 
   $('#submit-vote').click(function () {
     $.ajax({
@@ -47,35 +80,32 @@ $(document).ready(function () {
   })
 })
 
-$(document).on('change', 'select', function () {
-  console.log(this);
-  // $('#software-selected', this).remove();
-});
-
-function get_options(arr) {
-  $('select option').remove();
-  var $popular = $('#popular-selected');
-  var $software = $('#software-selected');
-  var $hardware = $('#hardware-selected');
-  $popular.append($('<option value="" disabled selected>Select popular vote</option>'));
-  $software.append($('<option value="" disabled selected>Select software vote</option>'));
-  $hardware.append($('<option value="" disabled selected>Select hardware vote</option>'));
-  $.each(arr, function (i, data) {
-    $popular.append($('<option>', {
-      value: data.id,
-      text: data.name
-    }));
-    $software.append($('<option>', {
-      value: data.id,
-      text: data.name
-    }));
-    $hardware.append($('<option>', {
-      value: data.id,
-      text: data.name
-    }));
+function remove_state(text) {
+  return arr_data.filter(function(el) {
+    return el.name !== text;
   });
 }
 
-function remove_state() {
+function get_populars(populars) {
+  var $popular = $('#popular-selected');
+  $('#popular-selected option[value!=0]').remove();
+  $.each(populars, function (i, data) {
+    $popular.append($('<option>', { value: data.id, text : data.name })); 
+  });
+}
 
+function get_softwares(softwares) {
+  var $software = $('#software-selected');
+  $('#software-selected option[value!=0]').remove();
+  $.each(softwares, function(i, data) {
+    $software.append($('<option>', { value: data.id, text : data.name }));
+  });
+}
+
+function get_hardwares(hardwares) {
+  var $hardware = $('#hardware-selected');
+  $('#hardware-selected option[value!=0]').remove();
+  $.each(hardwares, function(i, data) {
+    $hardware.append($('<option>', { value: data.id, text : data.name }));
+  })
 }
