@@ -10,12 +10,14 @@ $(document).ready(function() {
   })
 
   function get_option(data_name) {
+    var $popular = $('#popular-selected');
+    var $software = $('#software-selected');
+    var $hardware = $('#hardware-selected');
+
     $.each(data_name, function (i, name) {
-      $('#pop-selected').append($('<option>', { 
-          value: i,
-          text : name 
-        }));
-        console.log(name);
+      $popular.append($('<option>', { value: i, text : name }));
+      $software.append($('<option>', { value: i, text : name }));
+      $hardware.append($('<option>', { value: i, text : name }));
     });
   }
 
