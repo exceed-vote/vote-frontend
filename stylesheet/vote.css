@@ -1,3 +1,7 @@
+body {
+	max-width: 100%;
+	max-height: 100%;
+}
 .bg-color {
   color: #ffffff;
 	background-color: #2E3249;
@@ -45,12 +49,12 @@ a.right.carousel-control {
 }
 
 	.styled-select {
+		margin-top: 40px;
 	  position:relative;
 	  /*border:solid 1px #888888;*/
 	  overflow:hidden;
 	  display:block;
 	  /*width:12em;*/
-	  margin:auto;
 	  font-size:1em; /*use this to scale the select*/
 	}
 
@@ -75,7 +79,6 @@ a.right.carousel-control {
 		background-color: #fff;
 	}
 	.line-select-pop {
-		margin: auto;
 		background-color: #ffffff;
 		border:solid 2px #F0635F;
 		border-radius: 12px;
