@@ -1,7 +1,4 @@
 const arr_data = [];
-var arr_popular = [];
-var arr_software = [];
-var arr_hardware = [];
 var pop = '';
 var soft = '';
 var hard = '';
@@ -31,7 +28,7 @@ $(document).ready(function () {
     } else {
       hard = select.text();
     }
-    getAvailable(evt.target.id);
+    getAvailable();
     $('#'+ evt.target.id +' option[value=0]').remove();
   });
 
@@ -66,37 +63,6 @@ $(document).ready(function () {
     })
   })
 })
-/*
-function remove_state(arr, text) {
-  return arr.filter(function(el) {
-    return el.name !== text;
-  });
-}
-
-function get_populars(populars) {
-  var $popular = $('#popular-selected');
-  $('#popular-selected option[value!=0]').remove();
-  $.each(populars, function (i, data) {
-    $popular.append($('<option>', { value: data.id, text : data.name })); 
-  });
-}
-
-function get_softwares(softwares) {
-  var $software = $('#software-selected');
-  $('#software-selected option[value!=0]').remove();
-  $.each(softwares, function(i, data) {
-    $software.append($('<option>', { value: data.id, text : data.name }));
-  });
-}
-
-function get_hardwares(hardwares) {
-  var $hardware = $('#hardware-selected');
-  $('#hardware-selected option[value!=0]').remove();
-  $.each(hardwares, function(i, data) {
-    $hardware.append($('<option>', { value: data.id, text : data.name }));
-  })
-}
-*/
 
 function getAllData() {
   var $popular = $('#popular-selected');
@@ -109,7 +75,7 @@ function getAllData() {
   })
 }
 
-function getAvailable(id) {
+function getAvailable() {
   var $popular = $('#popular-selected');
   var $software = $('#software-selected');
   var $hardware = $('#hardware-selected');
