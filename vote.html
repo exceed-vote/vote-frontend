@@ -67,24 +67,10 @@
       <div class="logo-vote">
         <div class="three-logo"><img class="logo" src="images/logo_vote.png"/></div>
         <div class="row">
-          <div class="styled-logo col-md-5"><img class="logo" src="images/pop.png"/></div>
-          <div class="styled-select line-select-pop col-md-7 choose-dropdown">
-          	<select id="pop-selected">
-          		<option selected>Select popular vote</option>
-        			<option>1</option>
-          		<option>2</option>
-          		<option>3</option>
-              <option>4</option>
-              <option>5</option>
-        			<option>6</option>
-              <option>7</option>
-        			<option>8</option>
-        			<option>9</option>
-              <option>10</option>
-          		<option>11</option>
-          		<option>12</option>
-              <option>13</option>
-        			<option>14</option>
+          <div class="styled-logo col-md-5 col-xs-3"><img class="logo" src="images/pop.png"/></div>
+          <div class="styled-select line-select-pop col-md-7 col-xs-9 choose-dropdown">
+          	<select id="popular-selected">
+              <option value="0" hidden selected>Select popular vote</option>
         		</select>
         		<div class="select-button pop">
               <div class="small-arrow-down"></div>
@@ -93,24 +79,10 @@
         </div>
 
         <div class="row">
-          <div class="styled-logo col-md-5"><img class="logo" src="images/soft.png"/></div>
-          <div class="styled-select line-select-soft col-md-7 choose-dropdown">
-          	<select id="pop-selected">
-          		<option selected>Select software vote</option>
-        			<option>1</option>
-          		<option>2</option>
-          		<option>3</option>
-              <option>4</option>
-              <option>5</option>
-        			<option>6</option>
-              <option>7</option>
-        			<option>8</option>
-        			<option>9</option>
-              <option>10</option>
-          		<option>11</option>
-          		<option>12</option>
-              <option>13</option>
-        			<option>14</option>
+          <div class="styled-logo col-md-5 col-xs-3"><img class="logo" src="images/soft.png"/></div>
+          <div class="styled-select line-select-soft col-md-7 col-xs-9 choose-dropdown">
+          	<select id="software-selected">
+              <option value="0" hidden selected>Select software vote</option>
         		</select>
         		<div class="select-button soft">
               <div class="small-arrow-down"></div>
@@ -119,24 +91,10 @@
         </div>
 
         <div class="row">
-          <div class="styled-logo col-md-5"><img class="logo" src="images/hard.png"/></div>
-          <div class="styled-select line-select-hard col-md-7 choose-dropdown">
-          	<select id="pop-selected">
-          		<option selected>Select hardware vote</option>
-        			<option>1</option>
-          		<option>2</option>
-          		<option>3</option>
-              <option>4</option>
-              <option>5</option>
-        			<option>6</option>
-              <option>7</option>
-        			<option>8</option>
-        			<option>9</option>
-              <option>10</option>
-          		<option>11</option>
-          		<option>12</option>
-              <option>13</option>
-        			<option>14</option>
+          <div class="styled-logo col-md-5 col-xs-3"><img class="logo" src="images/hard.png"/></div>
+          <div class="styled-select line-select-hard col-md-7 col-xs-9 choose-dropdown">
+          	<select id="hardware-selected">
+              <option value="0" hidden selected>Select hardware vote</option>
         		</select>
         		<div class="select-button hard">
               <div class="small-arrow-down"></div>
@@ -146,7 +104,7 @@
         </div>
 
       <div class="submit-btn">
-        <button class="submit-btn center-block"><img class="submit-btn-size" src="images/submit.png" width="100%"></button>
+        <button id="submit-vote" class="submit-btn center-block"><img class="submit-btn-size" src="images/submit.png" width="100%"></button>
       </div>
     </div>
   </div>
@@ -154,5 +112,6 @@
   <div style="background-color:beige; height: 50px; width: 100%;position: fixed; bottom: 0;">
     <h1>Exceed 14</h1>
   </div>
+
   </body>
 </html>

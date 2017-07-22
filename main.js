@@ -22,6 +22,4 @@ $(document).ready(function() {
             //show error
         })
     })
-   
-     
 })

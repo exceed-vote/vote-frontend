@@ -3,10 +3,9 @@ body {
 	max-height: 100%;
 	margin-right: 0;
 }
-
 .bg-color {
   color: #ffffff;
-  background-color: #2E3249;
+	background-color: #2E3249;
 }
 
 .carousel {
@@ -14,9 +13,10 @@ body {
    background-color: rgba(255, 255, 255, 0.2); 
 }
 
-.show-group-info {
-	padding: 0 !important;
-}
+/*.show-group-info {
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.2);
+}*/
 
 .carousel-inner > .item > img {
     margin: 0 auto;
@@ -35,12 +35,15 @@ a.right.carousel-control {
   width: 100%;
   height: auto;
 }
+
 .logo-vote {
 	display: inline-block;
 }
+
 .three-logo {
 	margin: 20px 5px;
 }
+
 .styled-logo {
 	position:relative;
 	overflow:hidden;
@@ -50,15 +53,15 @@ a.right.carousel-control {
 }
 
 	.styled-select {
+		margin-right: 20px;
+		margin-top: 100px;
+		width: 50% !important;
 	  position:relative;
 	  /*border:solid 1px #888888;*/
 	  overflow:hidden;
 	  display:block;
 	  /*width:12em;*/
-	  margin:auto;
-		font-size:1em; /*use this to scale the select*/
-		margin-top: 40px;
-		padding-right: 15px;
+	  font-size:1em; /*use this to scale the select*/
 	}
 
 	.styled-select select {
@@ -158,6 +161,6 @@ a.right.carousel-control {
 		border: none;
 	}
 
-	.choose-dropdown {
-		width: 80%
+	.vote-tab {
+		height: 100%
 	}
