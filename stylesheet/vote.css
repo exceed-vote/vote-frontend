@@ -62,7 +62,14 @@ a.right.carousel-control {
 	  display:block;
 	  /*width:12em;*/
 	  font-size:1em; /*use this to scale the select*/
+		
 	}
+
+		@media only screen  and (min-width : 1224px) {
+			.styled-select {
+				margin-top: 50px;
+			}
+		}
 
 	.styled-select select {
 	  width:100%;
