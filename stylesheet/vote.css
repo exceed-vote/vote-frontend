@@ -68,7 +68,7 @@ a.right.carousel-control {
 	/*use this to scale the select*/
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
 	.logo-team {
 		width: 100%;
 	}
@@ -77,7 +77,7 @@ a.right.carousel-control {
 	}
 	.styled-select {
 		margin-left: 0;
-		margin-top: 12%;
+		margin-top: 10%;
 		width: 50% !important;
 	}
 
@@ -87,6 +87,10 @@ a.right.carousel-control {
 
 	.bg-color {
 		font-size: 1vmax;
+	}
+	
+	.submit-btn-size {
+		width: 180px !important;
 	}
 }
 
@@ -189,7 +193,7 @@ a.right.carousel-control {
 }
 
 .submit-btn-size {
-	width: 220px;
+	width: 440px;
 }
 
 .submit-btn {
