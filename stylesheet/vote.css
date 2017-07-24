@@ -92,10 +92,6 @@ a.right.carousel-control {
 	.bg-color {
 		font-size: 1vmax;
 	}
-	
-	.submit-btn-size {
-		width: 180px !important;
-	}
 }
 
 .styled-select select {
@@ -197,7 +193,7 @@ a.right.carousel-control {
 }
 
 .submit-btn-size {
-	width: 440px;
+	width: 12em; 
 }
 
 .submit-btn {
