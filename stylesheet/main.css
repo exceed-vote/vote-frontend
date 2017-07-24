@@ -1,4 +1,4 @@
-html, body {
+body {
   height: 100%;
   width: 100%;
 }
@@ -21,7 +21,7 @@ input:focus {
   }
 
   .login-input {
-    height: 45px !important;
+    height: 60px !important;
     font-size: 2vmax;
   }
 }
@@ -63,7 +63,7 @@ input:focus {
 
 .vote-btn-bg {
   background-color: inherit;
-  /*width: 15%;*/
+  /* width: 15%; */
   border: none;
   /*margin-left: 88px;*/
 }
@@ -81,10 +81,14 @@ input:focus {
     margin-left: 18%;
     margin-right: 15%;
   }
+  .vote-btn-size {
+    height: 200px !important;
+    width: auto;
+  }
 }
 
 .vote-btn-size {
-  height: 50px;
+  height: 80px;
   width: auto;
 }
 

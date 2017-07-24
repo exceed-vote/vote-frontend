@@ -57,6 +57,8 @@ $(document).ready(function () {
         location.href = "./index.html"
       }).fail(function (data) {
         console.error(data)
+        alert('Already vote\nชื่อผู้ใช้โหวดไปแล้วครับ')
+        location.href = "./index.html"
       })
     }).fail(function (data) {
       alert('Request timeout please login again')

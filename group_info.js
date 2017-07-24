@@ -3,7 +3,7 @@ var appendData = function (data) {
     $(data).each(function (index, value) {
         if (count == 1) {
             $('#group-info').append('<div class="item active">' +  
-                '<img src="/images/groupIMG/g' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+                '<img src="./images/groupIMG/g' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
                 '<div class="center">' +
                 '<p>' + value.short_description + '</p>' +
                 '</div>' +
@@ -11,7 +11,7 @@ var appendData = function (data) {
         }
         else {
         $('#group-info').append('<div class="item">' +
-            '<img src="/images/groupIMG/g' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+            '<img src="./images/groupIMG/g' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
             '<div class="center">' +
             '<p>' + value.short_description + '</p>' +
             '</div>' +
@@ -27,7 +27,7 @@ var appendDataM = function (data) {
     $(data).each(function (index, value) {
         if (count == 1) {
             $('#group-info').append('<div class="item active">' +  
-                '<img src="/images/groupIMG/m' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+                '<img src="./images/groupIMG/m' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
                 '<div class="center">' +
                 '<p>' + value.short_description + '</p>' +
                 '</div>' +
@@ -35,7 +35,7 @@ var appendDataM = function (data) {
         }
         else {
         $('#group-info').append('<div class="item">' +
-            '<img src="/images/groupIMG/m' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+            '<img src="./images/groupIMG/m' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
             '<div class="center">' +
             '<p>' + value.short_description + '</p>' +
             '</div>' +
