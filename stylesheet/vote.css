@@ -8,6 +8,7 @@ body {
 	height: inherit;
 	color: #ffffff;
 	background-color: #191b27;
+	font-size: 1.5vmax; 
 }
 
 .carousel {
@@ -35,6 +36,11 @@ a.right.carousel-control {
 	height: auto;
 }
 
+.logo-team {
+	width: 150%;
+	height: auto;
+}
+
 .logo-vote {
 	display: inline-block;
 }
@@ -51,29 +57,36 @@ a.right.carousel-control {
 }
 
 .styled-select {
-	margin-top: 9%;
-	margin-left: 5%;
-	width: 50% !important;
+	margin-top: 14%;
+	margin-left: 10%;
+	 width: 50% !important; 
 	position: relative;
 	/*border:solid 1px #888888;*/
 	overflow: hidden;
 	display: block;
-	/*width:12em;*/
-	font-size: 1em;
+	 /* width:12em;  */
 	/*use this to scale the select*/
 }
 
 @media only screen and (min-width: 1024px) {
+	.logo-team {
+		width: 100%;
+	}
 	.styled-logo {
 		margin-left: 0;
 	}
 	.styled-select {
 		margin-left: 0;
 		margin-top: 12%;
+		width: 50% !important;
 	}
 
 	.carousel-inner>.item>img {
 		margin-top: 0;
+	}
+
+	.bg-color {
+		font-size: 1vmax;
 	}
 }
 
@@ -138,7 +151,7 @@ a.right.carousel-control {
 	pointer-events: none;
 	/*text-align: center; vertical-align: middle; */
 	width: 2em;
-	height: 1.8em;
+	height: 2em;
 }
 
 .styled-select .select-button .select-button-text {
