@@ -12,7 +12,6 @@ body {
 }
 
 .carousel {
-	/*border-bottom: 1px solid white;*/
 }
 
 .show-group-info {
@@ -20,7 +19,7 @@ body {
 }
 
 .carousel-inner>.item>img {
-	margin-top: 3%;
+	text-align: center;
 }
 
 a.left.carousel-control {
@@ -68,11 +67,21 @@ a.right.carousel-control {
 	/*use this to scale the select*/
 }
 
+.group {
+	width: 100%;
+	height: auto;
+}
+
 @media only screen and (min-width: 992px) {
 	.margin-top {
 		margin-top: 5%;
 	}
-
+	
+	.group {
+		width: 80%;
+		height: auto;
+	}
+	
 	.logo-team {
 		width: 100%;
 	}
@@ -86,7 +95,7 @@ a.right.carousel-control {
 	}
 
 	.carousel-inner>.item>img {
-		margin-top: 0;
+		margin: auto;
 	}
 
 	.bg-color {
@@ -210,7 +219,10 @@ a.right.carousel-control {
 	justify-content: center;
 }
 
-.show-discription {
-	margin-top: 3%;
+.carousel-caption {
+	bottom: 8% !important;
+}
+
+.center {
 	text-align: center;
 }
