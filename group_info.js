@@ -1,9 +1,7 @@
 var appendData = function (data) {
     var count = 1;
     $(data).each(function (index, value) {
-        console.log(value.id + " " + value.name + " " + value.short_description + " ");
         if (count == 1) {
-            console.log('first');
             $('#group-info').append('<div class="item active">' +  
                 '<img src="data:image/png;base64, ' + value.picture+ '" alt="group ' + count + '" class="img-responsive"/>' +
                 '<div class="carousel-caption">' +
@@ -36,7 +34,7 @@ $(document).ready(function () {
         console.log(data);
         appendData(data);
     }).fail(function (data) {
-        console.log(data)
+        console.error(data)
         //show error
     })
 })

@@ -54,10 +54,10 @@ $(document).ready(function () {
       }).done(function (data) {
         console.log(data);
       }).fail(function (data) {
-        console.log(data)
+        console.error(data)
       })
     }).fail(function (data) {
-      console.log(data)
+      console.error(data)
       //alert that token is expire and return to login page
       location.href = "./index.html"
     })
