@@ -11,7 +11,7 @@ var appendData = function (data) {
         }
         else {
         $('#group-info').append('<div class="item">' +
-            '<img src="/images/groupIMG/g' + 1 + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+            '<img src="/images/groupIMG/g' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
             '<div class="center">' +
             '<p>' + value.short_description + '</p>' +
             '</div>' +
@@ -35,7 +35,7 @@ var appendDataM = function (data) {
         }
         else {
         $('#group-info').append('<div class="item">' +
-            '<img src="/images/groupIMG/m' + 1 + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
+            '<img src="/images/groupIMG/m' + count + '.jpg" alt="group ' + count + '" class="img-responsive group"/>' +
             '<div class="center">' +
             '<p>' + value.short_description + '</p>' +
             '</div>' +
@@ -63,7 +63,7 @@ $(document).ready(function () {
     })
 
     $('.carousel').carousel({
-        interval: 3000
+        interval: 2500
     })    
     
 })

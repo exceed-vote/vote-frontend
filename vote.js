@@ -37,9 +37,9 @@ $(document).ready(function () {
       url: 'http://localhost:8080/verify/' + Cookies.get("token")
     }).done(function (data) {
       console.log(data)
-      var pop = $('#pop-selected').val()
-      var hard = $('#hard-selected').val()
-      var soft = $('#soft-selected').val()
+      var pop = $('#popular-selected').val()
+      var hard = $('#hardware-selected').val()
+      var soft = $('#software-selected').val()
       $.ajax({
         type: 'POST',
         url: 'http://localhost:8080/vote',
@@ -53,12 +53,13 @@ $(document).ready(function () {
         contentType: 'application/json; charset=utf-8',
       }).done(function (data) {
         console.log(data);
+        alert('Vote Successful');
+        location.href = "./index.html"
       }).fail(function (data) {
         console.error(data)
       })
     }).fail(function (data) {
-      console.error(data)
-      //alert that token is expire and return to login page
+      alert('Request timeout please login again')
       location.href = "./index.html"
     })
   })
