@@ -69,6 +69,13 @@ a.right.carousel-control {
 }
 
 @media only screen and (min-width: 992px) {
+	.margin-top {
+		margin-top: 10%;
+	}
+
+	.logo {
+		margin-top: 10%;
+	}
 	.logo-team {
 		width: 100%;
 	}
